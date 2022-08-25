@@ -1,0 +1,9 @@
+.header {
+    padding: 10px;
+}
+
+.CardsUser {
+    display: flex;
+    padding: 30px;
+    justify-content:space-between
+}
