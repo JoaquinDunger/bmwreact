@@ -1,8 +1,10 @@
-import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import React from 'react';
+import cartlogo from './cart.png';
+import './CartWidget.css'
 
-function kart() {
+function Kart() {
     return (
-        <img src= {LocalGroceryStoreIcon} />
+        <img src={cartlogo} className='cartlogo' />
     )
     }
-export default kart
+export default Kart

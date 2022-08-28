@@ -2,8 +2,7 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BasicExample from './components/NavBar';
-import Cards from './cardComponent/cardComponent';
-import Kart from './components/CartWidget';
+import Cards from './cardComponent/ItemListContainer';
 
 class App extends React.Component {
   render () {

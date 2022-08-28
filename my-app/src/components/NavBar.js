@@ -3,12 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import img from "./logo.png";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Kart from './CartWidget';
 
 
 function BasicExample(props) {
         return (
-          <Navbar fixed="top-right" bg="light" expand="lg">
+          <Navbar className='navbar' fixed="top-right" bg="light" expand="lg">
             <Container>
             <Navbar.Brand href="#home">
             <img
@@ -34,7 +34,7 @@ function BasicExample(props) {
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
-              <img src={ShoppingCartIcon} alt='markt' />
+              <Kart />
             </Container>
           </Navbar>
         );
