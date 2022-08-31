@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import img from "./logo.png";
-import Kart from './CartWidget';
+import CartWidget from './CartWidget';
 
 
 function BasicExample(props) {
@@ -34,7 +34,7 @@ function BasicExample(props) {
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
-              <Kart />
+              <CartWidget />
             </Container>
           </Navbar>
         );

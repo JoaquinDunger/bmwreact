@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-const Cards = (props) => {
+const ItemListContainer = (props) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -30,4 +30,4 @@ const Cards = (props) => {
     </Card>
   );
 }
-export default Cards
+export default ItemListContainer

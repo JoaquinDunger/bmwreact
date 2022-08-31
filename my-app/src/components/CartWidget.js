@@ -2,9 +2,9 @@ import React from 'react';
 import cartlogo from './cart.png';
 import './CartWidget.css'
 
-function Kart() {
+function CartWidget() {
     return (
-        <img src={cartlogo} className='cartlogo' />
+        <img src={cartlogo} className='cartlogo' alt='cart' />
     )
     }
-export default Kart
+export default CartWidget
