@@ -1,48 +1,39 @@
-import { valueToPercent } from "@mui/base";
-import React from "react";
+
+import React, { useState } from "react";
 import "./ItemCount.css";
 
-class ItemCount extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            counter : 0,
-        };
+const ItemCount = ({stock, initial, onAdd}) => {
 
-        this.handlerCounterUp = this.handlerCounterUp.bind(this);
-        this.handlerCounterDown = this.handlerCounterDown.bind(this);
-        this.handlerResetCounter = this.handlerResetCounter.bind(this);
-   }
+    const [count, setCount] = useState(initial);
 
-handlerCounterUp() {
-    if(this.state.counter <10)
-    this.setState({ counter: this.state.counter + 1});
-        
-}
+    const sumar = () => {        	
+		if (count < stock) {            
+		setCount(count + 1);        
+		}    
+	};
+    const restar = () => {        
+		if (count > 1) {            
+		setCount(count - 1);        
+		}    
+	};
 
-handlerCounterDown() {
-    if(this.state.counter >0)
-    this.setState({ counter: this.state.counter - 1});
-} 
-
-handlerResetCounter() {
-    this.setState({ counter: this.state.counter = 0});
-}
-
-render() {
+    const comprar = () => {        
+		if (count <= stock) {            
+		onAdd(count);            
+		setCount(initial);        
+	    }
+    };
+    
     return (
         <div className="itemcount">
-            <p className="pcount">Stock: {this.state.counter}</p>
+            <p className="pcount">Stock:{count}</p>
             <div className="buttoncount">
-            <button onClick={this.handlerCounterDown}>Decrementar</button>
-            <button onClick={this.handlerCounterUp}>Incrementar</button>
-            <button onClick={this.handlerResetCounter}>Comprar</button>
+            <button onClick={restar}>Decrementar</button>
+            <button onClick={sumar}>Incrementar</button>
+            <button onClick={comprar}>Comprar</button>
             </div>
         </div>
     )
 }
-
-}
-
 
 export default ItemCount

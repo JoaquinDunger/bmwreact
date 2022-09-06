@@ -5,8 +5,10 @@ import BasicExample from './components/NavBar';
 import ItemListContainer from './cardComponent/ItemListContainer';
 import ItemCount from './components/ItemCount';
 
-class App extends React.Component {
-  render () {
+function App() {
+  const onAdd = (cantidad)=>{
+    console.log({cantidad})
+  }
     return (
         <div className='header'>
           <BasicExample 
@@ -32,12 +34,11 @@ class App extends React.Component {
               img='https://autos.yahoo.com.tw/p/r/w880/car-trim/November2020/8187ad4f1de4815b7881ab4421cd867e.jpeg'
             />
           </div>
-        <div className='itemcount'>
-        <ItemCount />
-        </div>
+          <div className='itemcount'>
+          <ItemCount stock = {5} initial = {0} onAdd={onAdd}/>
+          </div>
         </div>
   );
   }
-}
 
 export default App;
